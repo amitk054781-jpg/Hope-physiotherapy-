@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hope Physiotherapy | Sasaram Bihar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5fbfb;
+    color:#183b3f;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#087f8c,#09a6a6);
+    color:white;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.logo{
+    width:70px;
+    height:70px;
+    margin:0 auto 10px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+header p{
+    font-size:15px;
+}
+
+/* NAVIGATION */
+nav{
+    background:white;
+    padding:14px 5px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:#087f8c;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    margin:0 8px;
+}
+
+/* HERO */
+.hero{
+    min-height:460px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(
+        135deg,
+        #e0f8f6,
+        #f5ffff
+    );
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.hero h2{
+    color:#05636d;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.hero h3{
+    color:#087f8c;
+    font-size:21px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:#596f72;
+    font-size:17px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#087f8c;
+    color:white;
+    text-decoration:none;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    margin:5px;
+    box-shadow:0 5px 15px rgba(8,127,140,.25);
+}
+
+.btn:hover{
+    background:#05636d;
+}
+
+/* SECTIONS */
+section{
+    padding:55px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    color:#087f8c;
+    font-size:29px;
+}
+
+.section-title p{
+    color:#718285;
+    margin-top:5px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:28px 20px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#087f8c;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#657679;
+}
+
+/* ABOUT */
+.about-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.about-box p{
+    color:#596f72;
+    margin-bottom:12px;
+}
+
+/* WHY CHOOSE US */
+.why{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:18px;
+}
+
+.why-box{
+    background:#e3f8f6;
+    padding:23px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.why-box h3{
+    color:#05636d;
+    margin-top:8px;
+}
+
+/* CONTACT */
+.contact{
+    background:linear-gradient(135deg,#087f8c,#09a6a6);
+    color:white;
+    padding:42px 20px;
+    border-radius:22px;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:11px 0;
+    font-size:17px;
+}
+
+.contact .btn{
+    background:white;
+    color:#087f8c;
+    margin-top:18px;
+}
+
+/* MAP */
+.map-box{
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.map-box h3{
+    color:#087f8c;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#064f57;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:30px;
+}
+
+footer p{
+    font-size:14px;
+    margin:4px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:14px 19px;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    z-index:200;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    nav a{
+        font-size:12px;
+        margin:0 4px;
+    }
+
+    .hero{
+        min-height:420px;
+    }
+
+    .hero h2{
+        font-size:30px;
+    }
+
+    .hero h3{
+        font-size:18px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:42px 15px;
+    }
+
+    .section-title h2{
+        font-size:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">🩺</div>
+
+    <h1>Hope Physiotherapy</h1>
+
+    <p>Professional Physiotherapy & Rehabilitation Care</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+<nav>
+
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h3>Welcome to Hope Physiotherapy</h3>
+
+        <h2>Move Better. Live Better.</h2>
+
+        <p>
+            Professional physiotherapy care focused on
+            pain relief, rehabilitation, strength,
+            mobility and better quality of life.
+        </p>
+
+        <a href="tel:+919955524306" class="btn">
+            📞 Call Now
+        </a>
+
+        <a href="https://wa.me/919955524306"
+           target="_blank"
+           class="btn">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>Our Physiotherapy Services</h2>
+
+        <p>
+            Personalized care for better recovery
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">🦴</div>
+
+            <h3>Orthopedic Physiotherapy</h3>
+
+            <p>
+                Physiotherapy for joint, muscle,
+                bone and movement-related problems.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧠</div>
+
+            <h3>Neuro Physiotherapy</h3>
+
+            <p>
+                Rehabilitation focused on movement,
+                balance, coordination and functional recovery.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🏃</div>
+
+            <h3>Sports Injury</h3>
+
+            <p>
+                Rehabilitation and exercise programs
+                for sports and activity-related injuries.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💪</div>
+
+            <h3>Pain Management</h3>
+
+            <p>
+                Exercise-based care for back, neck,
+                shoulder and musculoskeletal pain.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🦵</div>
+
+            <h3>Post-Operative Rehab</h3>
+
+            <p>
+                Guided rehabilitation to improve
+                strength, mobility and function after surgery.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🚶</div>
+
+            <h3>Mobility Training</h3>
+
+            <p>
+                Individualized exercises to improve
+                walking, balance and functional mobility.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>About Hope Physiotherapy</h2>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <p>
+            Welcome to Hope Physiotherapy. We focus on
+            personalized physiotherapy care designed around
+            each patient's condition and rehabilitation goals.
+        </p>
+
+        <p>
+            Our approach combines assessment, therapeutic
+            exercises, rehabilitation and patient education
+            to support safe and effective recovery.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section>
+
+    <div class="section-title">
+
+        <h2>Why Choose Hope Physiotherapy?</h2>
+
+    </div>
+
+
+    <div class="why">
+
+        <div class="why-box">
+
+            <div class="icon">👨‍⚕️</div>
+
+            <h3>Personalized Care</h3>
+
+            <p>
+                Individual treatment planning.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="icon">🎯</div>
+
+            <h3>Recovery Focused</h3>
+
+            <p>
+                Goal-oriented rehabilitation.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="icon">❤️</div>
+
+            <h3>Patient Care</h3>
+
+            <p>
+                Comfortable and supportive environment.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="icon">📋</div>
+
+            <h3>Proper Assessment</h3>
+
+            <p>
+                Assessment-based treatment approach.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="contact">
+
+        <h2>Contact Hope Physiotherapy</h2>
+
+        <p>
+            📞 <strong>Phone:</strong>
+            +91 9955524306
+        </p>
+
+        <p>
+            📍 <strong>Address:</strong>
+            Prabhakar Road, Sasaram, Bihar
+        </p>
+
+        <p>
+            🕐 <strong>Clinic:</strong>
+            Contact us for appointment timing
+        </p>
+
+
+        <a href="tel:+919955524306" class="btn">
+            📞 Call Now
+        </a>
+
+
+        <a href="https://wa.me/919955524306"
+           target="_blank"
+           class="btn">
+            💬 Chat on WhatsApp
+        </a>
+
+    </div>
+
+
+    <!-- LOCATION -->
+    <div class="map-box">
+
+        <h3>📍 Our Location</h3>
+
+        <p>
+            Prabhakar Road, Sasaram, Bihar
+        </p>
+
+        <br>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Prabhakar+Road%2C+Sasaram%2C+Bihar"
+          target="_blank"
+          class="btn">
+
+            🗺️ Open in Google Maps
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+    href="https://wa.me/919955524306"
+    class="whatsapp"
+    target="_blank">
+
+    💬 WhatsApp
+
+</a>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Hope Physiotherapy
+    </p>
+
+    <p>
+        Professional Physiotherapy & Rehabilitation Care
+    </p>
+
+    <p>
+        Prabhakar Road, Sasaram, Bihar
+    </p>
+
+</footer>
+
+</body>
+</html>
